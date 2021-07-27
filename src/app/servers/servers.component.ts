@@ -10,7 +10,8 @@ import { Component, OnInit } from '@angular/core';
 export class ServersComponent implements OnInit {
   allowNewServer= false;
   ServerCreationStatus="No server was created!";
-  ServerName = "";
+  ServerName= 'TestUnits';
+  Username= "garachu.muthoni@gmail.com";
  
 
   constructor() { 
@@ -27,6 +28,11 @@ export class ServersComponent implements OnInit {
   };
  
   onUpdateServerName (event:Event) {
+    this.ServerName=(<HTMLInputElement> event.target).value;
+  };
 
+  onUpdateUsername() {
+    this.Username="username";
   }
+
 }
